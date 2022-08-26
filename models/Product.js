@@ -1,5 +1,9 @@
 // import important parts of sequelize library
+
+// import { Model, DataTypes } from "sequelize";
 const { Model, DataTypes } = require("sequelize");
+// const { DataTypes } = require("sequelize");
+
 // import our database connection from config.js
 const sequelize = require("../config/connection");
 
