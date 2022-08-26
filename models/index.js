@@ -5,7 +5,11 @@ const Tag = require("./Tag");
 const ProductTag = require("./ProductTag");
 
 // Products belongsTo Category
-Product.belongsTo(Category, { foreignKey: "category_id" });
+// DEBUG: belongsTo error: Error: product.belongsTo called with something that's not a subclass of Sequelize.Model
+Product.belongsTo(Category, {
+  as: "category",
+  foreignKey: "category_id",
+});
 
 // Categories have many Products
 Category.hasMany(Product, {
